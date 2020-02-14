@@ -52,6 +52,12 @@
 
 - printf, scanf가 c++ 표준 입출력인 cout와 cin보다 빠르기 때문에 입출력은 printf, scanf 을 사용
 
+- c++에서는 bool이라는 타입을 지원해서 true와 false를 알 수 있다.
+  
+  c언어에서는 bool타입을 지원하지 않는다.
+  
+  c언어에서는 int에다가 true를 집어 넣게 되면, true는 1로 저장되고 false는 0으로 저장된다.
+
 ## __*목록*__
 
 - 준비중입니다.
