@@ -1,7 +1,7 @@
 /*
 	다이나믹 프로그래밍 타일링 문제
 	백준 11726번 문제 
-	https://www.acmicpc.net/problem/11726)
+	https://www.acmicpc.net/problem/11726
 	2×n 타일링
 	시간제한 : 1 초
 	메모리제한 : 256 MB
