@@ -42,3 +42,25 @@ int main(void) {
 	scanf("%d", &x);
 	printf("%d", dp(x));
 }
+
+/*
+점화식 사용
+값을 미리 넣어두고 사용 
+#include <stdio.h>
+
+int d[1001];
+
+int main(void) {
+	int x = 0;
+	scanf("%d", &x);
+	
+	d[0] = 1;
+	d[1] = 1;
+	
+	for(int i = 2; i <= 1000; i++){
+		d[i] = (d[i-1] + d[i-2] + d[i-2]) % 10007;
+	}
+	
+	printf("%d", d[x]);
+}
+*/
