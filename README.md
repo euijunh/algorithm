@@ -116,6 +116,10 @@
 
 - 위상 정렬(Topology Sort)
 
+	순서가 정해져 있는 작업을 차례로 수행해야 할 때 순서를 결정
+
+	임계경로 구하기
+
 - 강한 결합 요소(Strongly Connected Component)
 
 - 네트워크 플로우(Network Flow)
