@@ -114,7 +114,7 @@
 
 - 플로이드 와샬(Floyd Warshall) 알고리즘
 
-- 위상 정렬(Topology Sort)
+- 위상 정렬(Topology Sort) - 사이클이 없어야 한다.
 
 	순서가 정해져 있는 작업을 차례로 수행해야 할 때 순서를 결정
 
