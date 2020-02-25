@@ -128,11 +128,9 @@
 
 - KMP(Knuth-Morris-Pratt) 알고리즘
 
-- 라빈 카프(Rabin-Karp) 알고리즘 - O(1)
+- 라빈 카프(Rabin-Karp) 알고리즘 - O(N)
 
-	문자열 매칭 알고리즘
-	
-	해시(Hash) 기법
+	문자열 매칭 알고리즘, 해시(Hash) 기법
 
 - 그리디(Greedy) 알고리즘
 
