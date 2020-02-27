@@ -71,7 +71,7 @@ bool c[MAX]; // 특정한 정점을 이미 처리했는지 여부를 보관
 int n = 3; 
 
 // 매칭에 성공한 경우 True, 실패한 경우 False 
-bool dfs(int x) {
+bool dfs(int x) { // 1, 2, 3 순서로 x값이 들어온다. 
 	// 연결된 모든 노드에 대해서 들어갈 수 있는지 시도 
 	for(int i = 0; i < a[x].size(); i++) { // 특정한 정점에 대해서 연결된 모든 노드를 다 확인 
 		int t = a[x][i]; // 연결된 노드를 담는다. 
@@ -97,7 +97,7 @@ int main(void) {
 	a[3].push_back(2);
 	int count = 0;
 	// 총 몇개까지 최대매칭이 가능한지 
-	for(int i = 1; i <= n; i++) { // 최대한 우겨 넣습니다. 
+	for(int i = 1; i <= n; i++) { // 최대한 우겨 넣습니다. 3번 반복 
 		fill(c, c + MAX, false); // 매칭을 수행할 때마다 false로 초기화 
 		if(dfs(i)) count++;
 	}
@@ -107,6 +107,12 @@ int main(void) {
 		if(d[i] != 0) {
 			printf("%d -> %d\n", d[i], i);
 		}
+		/*
+			출력 
+			2 -> 1
+			3 -> 2
+			1 -> 3	
+		*/
 	}
 	return 0;
 }
