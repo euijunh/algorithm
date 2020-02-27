@@ -78,27 +78,27 @@
 
 ## __*목록*__
 
-- 선택 정렬(Selection Sort)
+- *선택 정렬(Selection Sort)*
 
 	O(n^2)
 
-- 버블 정렬(Bubble Sort)
+- *버블 정렬(Bubble Sort)*
 
 	O(n^2)
 
-- 삽입 정렬(Insertion Sort)
+- *삽입 정렬(Insertion Sort)*
 
 	정렬이 되어있다고 가정하고 필요한 경우에만 삽입한다.
 	
 	O(n^2)
 
-- 퀵 정렬(Quick Sort)
+- *퀵 정렬(Quick Sort)*
 
 	분할정복 알고리즘 O(N * logN)
 	
 	피벗값에 따라 최악의 경우 O(n^2)
 
-- 병합 정렬(Merge Sort)
+- *병합 정렬(Merge Sort)*
 
 	분할정복 알고리즘, 정확히 반으로 나눈다는 점에서 O(N * logN) 보장
 
