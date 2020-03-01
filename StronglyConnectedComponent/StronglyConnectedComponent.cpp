@@ -91,26 +91,33 @@
 
 using namespace std;
 
-int id, d[MAX];
-bool finished[MAX];
-vector<int> a[MAX];
+int id, d[MAX]; // d[MAX] : 노드마다 고유한 번호 할당 
+bool finished[MAX]; // 현재 특정한 노드에 관한 dfs가 끝났는지 확인 
+vector<int> a[MAX]; // 인접한 노드를 담는다. 
 vector<vector<int> > SCC;
 stack<int> s;
 
-// DFS는 총 정점의 갯수만큼 실행됩니다. 
+// DFS는 총 정점의 갯수만큼 실행됩니다. 즉 N번 수행 
 int dfs(int x) {
-	d[x] = ++id; // 노드마다 고유한 번호를 할당 
+	d[x] = ++id; // 노드마다 고유한 번호를 할당 ( 처음에 부모로 설정된 값 ) 
 	s.push(x); // 스택에 자기 자신을 삽입 
 	
-	int parent = d[x];
+	int parent = d[x]; // 부모 확인용 
+	// 모든 인접 노드확인 
 	for(int i = 0; i < a[x].size(); i++) {
-		int y = a[x][i];
+		int y = a[x][i]; // 인접한 노드를 가르킴 
+		// 해당노드를 방문하지 않았다면 해당 노드로 dfs수행 후 더 작은 값으로 부모로 가리키게됨 
 		if(d[y] == 0) parent = min(parent, dfs(y)); // 방문하지 않은 이웃 
+		// 방문은 됬지만 처리가 않된 노드, 즉 현재 dfs를 수행하고 있는 노드 
+		// parent 값을 처리되고 있는 값의 부모와 비교해서 더작은 값을 선택하도록
+		// 현재 처리 중인 이웃이 자신의 부모라면 거기까지 scc에 포함되도록 만들어 같은 부모값을 가지도록 함 
 		else if(!finished[y]) parent = min(parent, d[y]); // 처리중인 이웃 
 	}
 	
-	if(parent == d[x]) { // 부모노드가 자기 자신인 경우 
+	// 부모노드가 자기 자신인 경우, 즉 자기자신이 parent인 경우 stack에서 꺼내 SCC를 만든다. 
+	if(parent == d[x]) { 
 		vector<int> scc;
+		// 자기자신이 나올 때까지 
 		while(1){
 			int t = s.top();
 			s.pop();
