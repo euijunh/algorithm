@@ -114,7 +114,11 @@
 
 - 스택(Stack)
 
+	LIFO(Last Input First Out)
+
 - 큐(Queue)
+
+	FIFO (First Input First Out)
 
 - *너비 우선 탐색(BFS)*
 
