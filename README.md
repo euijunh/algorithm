@@ -112,11 +112,11 @@
 	
 	범위조건이 있는 경우, O(N)
 
-- 스택(Stack)
+- *스택(Stack)*
 
 	LIFO(Last Input First Out)
 
-- 큐(Queue)
+- *큐(Queue)*
 
 	FIFO (First Input First Out)
 
