@@ -7,7 +7,7 @@
   * 문자배열
     * `let input = require('fs').readFileSync('dev/stdin').toString().split(' ');`
   * 문자
-    * `let input = require('fs').readFileSync('dev/stdin').toString().();`
+    * `let input = require('fs').readFileSync('dev/stdin').toString().trim();`
 
 * Number
   * ``let input = require('fs').readFileSync('dev/stdin').toString().split(' ').map(value => +value);``
