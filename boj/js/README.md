@@ -12,7 +12,7 @@
 * Number
   * ``let input = require('fs').readFileSync('dev/stdin').toString().split(' ').map(value => +value);``
 
-## 입력 
+## 입력 에러
 **node.js - 런타임 에러 (EACCES) 현상**
 
 fs모듈는 예제 입력 파일에 접근해야 하기 때문에 일부 문제에서는 "런타임 에러 (EACCES)" 형태의 접근권한 오류가 생김
