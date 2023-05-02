@@ -94,5 +94,11 @@ console.log(lines)
 console.log("Hello World");
 ```
 
-# 2차원 배열 만들기
-`Array.from(new Array(100), x => new Array(100).fill(0))`
+# 100*100 크기의 2차원 배열 만들기
+```
+Array.from(new Array(100), () => new Array(100).fill(0))
+
+// x는 현재 배열의 현재 index의 값을 의미
+Array.from(new Array(100), x => x + 1)
+```
+
