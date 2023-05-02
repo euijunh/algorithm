@@ -94,7 +94,7 @@ console.log(lines)
 console.log("Hello World");
 ```
 
-# 100*100 크기의 2차원 배열 만들기
+## 100*100 크기의 2차원 배열 만들기
 ```
 Array.from(new Array(100), () => new Array(100).fill(0))
 
