@@ -102,3 +102,9 @@ Array.from(new Array(100), () => new Array(100).fill(0))
 Array.from(new Array(100), x => x + 1)
 ```
 
+## 제곱
+```
+`Math.pow(2, 2)` => 2에 2제곱을 구하는 함수
+
+** =>  거듭제곱 연산자
+```
