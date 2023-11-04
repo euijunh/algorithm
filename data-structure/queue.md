@@ -1,6 +1,6 @@
 # Queue
 
-FIFO(First In First Out) - 먼저 추가한 데이터가 먼저 나가는 선입선출, 한쪽에서는 입력만, 다른쪽에서 출력만 한다.
+FIFO(First In First Out) - 먼저 추가한 데이터가 먼저 나가는 선입선출, 한쪽에서는 입력만하고 다른쪽에서는 출력만 한다.
 
 > LIFO인 stack과 다르다
 
