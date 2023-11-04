@@ -1,6 +1,6 @@
 # Stack
 
-LIFO(Last In First Out) - 나중에 추가한 데이터가 먼저 나가는 후입선출
+LIFO(Last In First Out) - 나중에 추가한 데이터가 먼저 나가는 후입선출, 입출력이 한쪽에서만 이루어진다.
 
 > FIFO(First In First Out)인 queue와 다르다
 
