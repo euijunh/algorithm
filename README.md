@@ -3,7 +3,7 @@
 > ## 자료구조 Data Structure
 
 - [Stack](https://github.com/euijunh/algorithm/blob/main/data-structure/stack.md)
-- [Queue]()
+- [Queue](https://github.com/euijunh/algorithm/blob/main/data-structure/queue.md)
 - [Hashmap]()
 - [Graph]()
 - [Tree]()
