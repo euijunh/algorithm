@@ -48,6 +48,17 @@ function solution(citations) {
 
     return answer;
 }
+
+// 다른풀이방법
+function solution(citations) {
+  citations.sort((a, b) => b - a);
+  for (let i = 0; i < citations.length; i++) {
+    if (i >= citations[i]) {
+      return i;
+    }
+  }
+  return citations.length;
+}
 ```
 
 ### 참고
