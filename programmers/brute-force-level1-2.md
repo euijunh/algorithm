@@ -66,8 +66,42 @@ function solution(answers) {
         }
     })
 
+    // 오답 지점 확인, 위 코드를 아래코드로 수정하면 정답
+    // answer에 index 값을 수정
+    // let idx = 0;
+    // student_answer_sheet.forEach((sheet, i) => {
+    //     if(max === score[i]) {
+    //         answer[idx] = i+1
+    //         idx++
+    //     }
+    // })
+
     return answer;
 }
 
-// 정답제출
+// 정답제출 - 개선된 코드
+function solution(answers) {
+    const no1_student = [1, 2, 3, 4, 5];
+    const no2_student = [2, 1, 2, 3, 2, 4, 2, 5];
+    const no3_student = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+    let answer = [];
+    let scores = [0, 0, 0];
+    
+    answers.forEach((answer, i) => {
+        if(no1_student[i % 5] === answer) scores[0]++
+        if(no2_student[i % 8] === answer) scores[1]++
+        if(no3_student[i % 10] === answer) scores[2]++
+    })
+    
+    const max = Math.max(...scores);
+    let idx = 0;
+    scores.forEach((score, i) => {
+        if(score === max) {
+            answer[idx] = i+1
+            idx++
+        }
+    })
+
+    return answer;
+}
 ```
