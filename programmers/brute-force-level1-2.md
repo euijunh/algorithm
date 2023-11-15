@@ -73,6 +73,7 @@ function solution(answers) {
     //     if(max === score[i]) {
     //         answer[idx] = i+1
     //         idx++
+    //         or -> answer.push(i+1)
     //     }
     // })
 
@@ -99,6 +100,7 @@ function solution(answers) {
         if(score === max) {
             answer[idx] = i+1
             idx++
+            // or -> answer.push(i+1)
         }
     })
 
