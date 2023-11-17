@@ -98,7 +98,7 @@ function solution(numbers) {
 // 더 성능개선 - "에라토스테네스의 체" 활용 + 배열로 변환 작업 삭제
 function solution(numbers) {
     let answer = 0;
-    let numbers_set = new Set();
+    let numbers_set = new Set()
     const recursive = (comb, others) => {
         if(comb && comb != "0" && comb[0] != "0") numbers_set.add(comb)
         for(let i = 0; i < others.length; i++) {
@@ -109,7 +109,7 @@ function solution(numbers) {
     recursive('', numbers);
 
     const isPrimeNumber = num => {
-        if(num == 0 || num == 1) return false
+        if(num === 0 || num === 1) return false
         let i = 2;
         const square_root = Math.sqrt(num);
         while(i <= square_root) {
@@ -120,7 +120,7 @@ function solution(numbers) {
     }
     
     numbers_set.forEach(num => {
-        if(isPrimeNumber(num)) answer++
+        if(isPrimeNumber(+num)) answer++
     })
 
     return answer;
