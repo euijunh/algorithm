@@ -31,6 +31,10 @@ Leo가 본 카펫에서 갈색 격자의 수 brown, 노란색 격자의 수 yell
 ### 제출
 ```js
 // 첫제출 - 오답
+// 적용한 개념
+// 1. 카펫의 너비는 높이와 같거나, 높이보다 깁니다.
+// 2. brown + yellow 는 너비 * 높이 입니다.
+
 function solution(brown, yellow) {
     let answer = [];
     const sum = brown + yellow;
@@ -45,7 +49,31 @@ function solution(brown, yellow) {
     }
     return answer;
 }
+
+// 정답 제출
+// 조건정리
+/*
+1. brown/2 +2 === 너비 + 높이
+2. (가로-2) * (높이-2) = 노란색 격자 수
+3. 최소높이는 3이다
+4. brown + yellow 는 높이의 배수 입니다.
+*/
+function solution(brown, yellow) {
+    let answer = [];
+    const sum = brown + yellow;
+    for(let h = 3; h <= sum/h; h++) {
+	// brown + yellow 는 높이의 배수이기 때문에 h <= sum/h 까지만 반복수행
+        if(sum%h === 0) {
+            const w = sum/h;
+            if(yellow === (w-2)*(h-2)) {
+                answer.push(w, h);
+                break;
+            }
+        }
+    }
+    return answer;
+}
 ```
 
 
-## 참고
+
