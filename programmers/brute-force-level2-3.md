@@ -38,6 +38,7 @@ XX게임에는 피로도 시스템(0 이상의 정수로 표현합니다)이 있
 ```js
 // 오답
 // recursion 함수 내에서 f에서 뺀 others를 매개변수로하는 recursion함수를 재귀적으로 호출 하도록 수정할 것
+// recursion 함수 내에 for 안에 others를 현재 dungeon을 제외하고 주어야할까
 function solution(k, dungeons) {
     let answer = [];
     let sorted_dungeons = [...dungeons].sort((a, b) => {
@@ -45,20 +46,21 @@ function solution(k, dungeons) {
         return 1
     })
     
-    const recursion = (f, others, i) => {
-        if(others.length < 1 || f < others[0] || f < others[1]) {
+    const recursion = (f, dungeon, others, idx) => {
+        if(others.length < 1 || f < others[0][0] || f < others[0][1]) {
             return
         }
-        answer[i]++;
+        f -= dungeon[1];
+        answer[idx]++;
         for(let i = 0; i < others.length; i++) {
-            recursion(f, [...others.slice(0, i), ...others.slice(i+1)], i)
+            // dungeon을 제외한 others 넘기기
+            recursion(f, others[i], [...others.slice(0, i-1), ...others.slice(i+1)], idx)
         }
     }
     
     for(let i = 0; i < dungeons.length; i++) {
-        let f = k;
         answer[i] = 0;
-        recursion(f, sorted_dungeons, i);
+        recursion(k, sorted_dungeons[i], sorted_dungeons, i);
     }
     return Math.max(...answer);
 }
