@@ -64,8 +64,28 @@ function solution(k, dungeons) {
     }
     return Math.max(...answer);
 }
+
+// 정답제출
+function solution(k, dungeons) {
+    const n = dungeons.length;
+    const visited = new Array(n).fill(false);
+    let answer = -1;
+    const recursion = (f, cnt) => {
+        for(let i = 0; i < n; i++) {
+            if(!visited[i] && dungeons[i][0] <= f) {
+                visited[i] = true;
+                recursion(f-dungeons[i][1], cnt+1);
+                visited[i] = false;
+            }
+        }
+        answer = Math.max(answer, cnt);
+    }
+    recursion(k, 0);
+    return answer;
+}
 ```
 
 
 
 ## 참고
+`DFS` or 순열과 완전탐색
